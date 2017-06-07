@@ -1,8 +1,8 @@
 //
 //  ViewController.swift
-//  manyFingers
+//  Cat years
 //
-//  Created by Christopher Bray on 6/1/17.
+//  Created by Christopher Bray on 5/31/17.
 //  Copyright © 2017 Christopher Bray. All rights reserved.
 //
 
@@ -10,27 +10,41 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet var guess: UITextField!
+    @IBOutlet var catYears: UITextField!
     
-    @IBOutlet var result: UILabel!
+    @IBOutlet var catMath: UILabel!
     
-    @IBAction func onPress(_ sender: Any) {
+    @IBAction func submitCat(_ sender: Any) {
         
-        let diceRoll = String(arc4random_uniform(6))
+       let ageInCatYears = Int(catYears.text!)! * 7
         
-        if guess.text == diceRoll {
-            result.text = "You're right!"
-        }
+        catMath.text = String(ageInCatYears)
         
-        else
-        {result.text = "The correct answer was " + diceRoll + "."}
+        
     }
+    
+    
+    
     override func viewDidLoad() {
+        
+        
+        
+        
+        
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        
+        
+        
+        
     }
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+
+
 }
+
